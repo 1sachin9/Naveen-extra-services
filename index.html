@@ -3,102 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Naveen Extra Services - Jaipur</title>
+  <title>Naveen Extra Services</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: url('https://images.unsplash.com/photo-1605810230434-7631ac76ec71?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background: url('https://images.unsplash.com/photo-1598134266062-7c8dd622ed26?auto=format&fit=crop&w=1650&q=80') no-repeat center center fixed;
       background-size: cover;
-      color: white;
+      color: #fff;
+      text-align: center;
     }
 
     .overlay {
       background-color: rgba(0, 0, 0, 0.65);
       min-height: 100vh;
-      padding: 20px;
+      padding: 40px 20px;
     }
 
-    header {
-      text-align: center;
-      padding: 30px 10px;
-    }
-
-    header h1 {
+    h1 {
       font-size: 2.5rem;
       margin-bottom: 10px;
     }
 
-    header p {
+    h2 {
       font-size: 1.2rem;
-      color: #ddd;
+      font-weight: 400;
+      margin-bottom: 30px;
     }
 
-    section {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 300px;
+      margin: 0 auto 40px;
     }
 
-    .pricing {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid #ffffff22;
+    .button-container a {
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
+      padding: 15px;
       border-radius: 10px;
-      padding: 15px 20px;
-      margin: 10px 0;
-      cursor: pointer;
-      transition: 0.3s ease;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background 0.3s;
     }
 
-    .pricing:hover {
-      background: rgba(255, 255, 255, 0.25);
-      transform: scale(1.03);
-    }
-
-    .pricing h3 {
-      margin: 0;
-      font-size: 1.3rem;
-      color: #fff;
+    .button-container a:hover {
+      background-color: #128C7E;
     }
 
     iframe {
-      width: 100%;
-      height: 250px;
       border: none;
-      border-radius: 12px;
-      margin-top: 20px;
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .button-container a {
+        font-size: 14px;
+        padding: 12px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="overlay">
-    <header>
-      <h1>Naveen Extra Services</h1>
-      <p>Rent anything in Jaipur — quick, reliable, simple.</p>
-    </header>
+    <h1>Naveen Extra Services</h1>
+    <h2>Hourly / Daily Rentals – Jaipur</h2>
 
-    <section>
-      <h2>📦 Book Your Rental</h2>
-      <div class="pricing" onclick="book('1 hour')"><h3>1 Hour – ₹100</h3></div>
-      <div class="pricing" onclick="book('2 hours')"><h3>2 Hours – ₹200</h3></div>
-      <div class="pricing" onclick="book('3 hours')"><h3>3 Hours – ₹300</h3></div>
-      <div class="pricing" onclick="book('4 hours')"><h3>4 Hours – ₹400</h3></div>
-      <div class="pricing" onclick="book('1 night')"><h3>Night – ₹500</h3></div>
-      <div class="pricing" onclick="book('full day')"><h3>Full Day – ₹2000</h3></div>
-    </section>
+    <div class="button-container">
+      <a href="https://wa.me/918058207887?text=Main%201%20ghante%20ke%20liye%20booking%20karna%20chahta%20hoon" target="_blank">1 Hour - ₹100</a>
+      <a href="https://wa.me/918058207887?text=Main%202%20ghante%20ke%20liye%20booking%20karna%20chahta%20hoon" target="_blank">2 Hours - ₹180</a>
+      <a href="https://wa.me/918058207887?text=Main%204%20ghante%20ke%20liye%20booking%20karna%20chahta%20hoon" target="_blank">4 Hours - ₹300</a>
+      <a href="https://wa.me/918058207887?text=Main%20raat%20bhar%20ke%20liye%20booking%20karna%20chahta%20hoon" target="_blank">Night (Full) - ₹3000</a>
+      <a href="https://wa.me/918058207887?text=Main%20poore%20din%20ke%20liye%20booking%20karna%20chahta%20hoon" target="_blank">Full Day - ₹2000</a>
+    </div>
 
-    <section>
-      <h2>📍 Location</h2>
-      <iframe src="https://maps.google.com/maps?q=jaipur&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
-    </section>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.826186395589!2d75.80007171491254!3d26.850049083156193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5f23bcb9a5d%3A0x9e46c0c5b1f478c6!2sJaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1626187886654!5m2!1sen!2sin"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
   </div>
-
-  <script>
-    function book(duration) {
-      const phone = "918058207887";
-      const message = encodeURIComponent(Hi, I want to book for ${duration}.);
-      window.open(https://wa.me/${phone}?text=${message}, '_blank');
-    }
-  </script>
 </body>
 </html>
