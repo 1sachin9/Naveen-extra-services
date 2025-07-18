@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f2f2f2;
+      background: #f5f5f5;
       margin: 0;
       padding: 0;
     }
@@ -25,23 +25,16 @@
       border-radius: 8px;
       padding: 20px;
       margin: 10px 0;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+    .pricing:hover {
+      transform: scale(1.02);
+      background: #e6f0ff;
     }
     .pricing h3 {
-      margin-top: 0;
-    }
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-    }
-    .whatsapp a {
-      background: #25D366;
-      color: white;
-      padding: 12px 18px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-size: 16px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin: 0;
     }
     iframe {
       width: 100%;
@@ -59,13 +52,14 @@
   </header>
 
   <section>
-    <h2>Available Plans</h2>
-    <div class="pricing"><h3>1 Hour – ₹100</h3></div>
-    <div class="pricing"><h3>2 Hours – ₹200</h3></div>
-    <div class="pricing"><h3>3 Hours – ₹300</h3></div>
-    <div class="pricing"><h3>4 Hours – ₹400</h3></div>
-    <div class="pricing"><h3>Night Rent (1 Night) – ₹500</h3></div>
-    <div class="pricing"><h3>Full Day – ₹2000</h3></div>
+    <h2>Click to Book Now</h2>
+    
+    <div class="pricing" onclick="book('1 hour')"><h3>1 Hour – ₹100</h3></div>
+    <div class="pricing" onclick="book('2 hours')"><h3>2 Hours – ₹200</h3></div>
+    <div class="pricing" onclick="book('3 hours')"><h3>3 Hours – ₹300</h3></div>
+    <div class="pricing" onclick="book('4 hours')"><h3>4 Hours – ₹400</h3></div>
+    <div class="pricing" onclick="book('1 night')"><h3>Night Rent – ₹500</h3></div>
+    <div class="pricing" onclick="book('full day')"><h3>Full Day – ₹2000</h3></div>
   </section>
 
   <section>
@@ -73,8 +67,12 @@
     <iframe src="https://maps.google.com/maps?q=jaipur&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
   </section>
 
-  <div class="whatsapp">
-    <a href="https://wa.me/918058207887?text=Hi%20I%20want%20to%20book%20a%20rental%20service" target="_blank">Book on WhatsApp</a>
-  </div>
+  <script>
+    function book(duration) {
+      const phone = "918058207887";
+      const message = encodeURIComponent(Hi, I want to book for ${duration}.);
+      window.open(https://wa.me/${phone}?text=${message}, '_blank');
+    }
+  </script>
 </body>
 </html>
